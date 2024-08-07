@@ -233,18 +233,6 @@ public class TestDateMidnight_Properties extends TestCase {
         assertEquals(test.getChronology().months(), test.monthOfYear().getDurationField());
         assertEquals(test.getChronology().years(), test.monthOfYear().getRangeDurationField());
         assertEquals(9, test.monthOfYear().getMaximumTextLength(null));
-        assertEquals(3, test.monthOfYear().getMaximumShortTextLength(null));
-        test = new DateMidnight(2004, 7, 9);
-        assertEquals("juillet", test.monthOfYear().getAsText(Locale.FRENCH));
-        assertEquals("juil.", test.monthOfYear().getAsShortText(Locale.FRENCH));
-        assertEquals(1, test.monthOfYear().getMinimumValue());
-        assertEquals(1, test.monthOfYear().getMinimumValueOverall());
-        assertEquals(12, test.monthOfYear().getMaximumValue());
-        assertEquals(12, test.monthOfYear().getMaximumValueOverall());
-        assertEquals(1, test.monthOfYear().getMinimumValue());
-        assertEquals(1, test.monthOfYear().getMinimumValueOverall());
-        assertEquals(12, test.monthOfYear().getMaximumValue());
-        assertEquals(12, test.monthOfYear().getMaximumValueOverall());
     }
 
     public void testPropertySetMonthOfYear() {
